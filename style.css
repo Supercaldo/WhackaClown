@@ -1,0 +1,230 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body
+{
+    font-family: 'Bubblegum Sans', cursive;
+    min-height: 100vh;
+    overflow: hidden;
+    cursor: none;
+    background-image: url(./images/backgroundlight.png);
+    background-size: 100%;
+    color: transparent;
+    background-color: rgb(19, 13, 7);
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+
+
+}
+
+.barrels {
+
+    position:absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 190px);
+    gap: 0px;
+    top: 70%;
+    left: 55%;
+    width: 870px;
+    height: 1100px;
+    transform: translate(-50%, -50%);
+    -border: 1px solid black;
+}
+
+.barrel {
+position: relative;
+height: 340px;
+width: 210px;
+-border: 1px solid black;
+overflow: hidden;
+pointer-events: none;
+
+}
+
+.barril {
+position: absolute;
+bottom: 0px;
+left: 30px;
+width: 140px;
+object-fit: cover;
+pointer-events: none;
+
+}
+
+.clown1a {
+    position: absolute;
+    top: 120px;
+    left:20px;
+    width:155px ;
+    object-fit: contain;
+  
+    z-index: -1;
+    -cursor: pointer;
+
+}
+
+
+.clown2a {
+    position: absolute;
+    top: 40px;
+    left:20px;
+    width:155px ;
+    object-fit: contain;
+  
+    z-index: -2;
+    -cursor: pointer;
+
+}
+
+.scoretable {
+    font-size: 1.5rem;
+    height: 240px;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    transform: translate(-5%, -5%);
+    color: white;
+    background-image: url(./images/scoresign.png);
+    background-position:center;
+   
+}
+
+.scoretable div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu {
+
+    cursor: default;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: white;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./images/stagecurtain.png);
+    background-size: 100%;
+    background-position: center;
+    background-color: rgb(18, 24, 24);
+    background-repeat: no-repeat;
+    pointer-events: all;
+    z-index: 1000;
+
+}
+
+.menu button {
+
+    padding: 1rem 2rem;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.2 rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-family: 'Bubblegum Sans', cursive;
+    
+
+}
+
+.menu button:hover {
+    background: rgb(249, 185, 89);
+    color: black;
+}
+
+.menu h1
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.menu h2 {
+    visibility: hidden;
+
+}
+
+.highscore{
+    margin-left: 10px;
+    animation: scorebump 0.5s ease infinite
+    alternate;
+
+}
+
+.display {
+
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menuclose {
+
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.hit {
+    background: lightgoldenrodyellow;
+    
+}
+
+.hammer {
+    position: absolute;
+    z-index: 1000;
+    height: 125px;
+    top: 0;
+    left: 0;
+    transform: translate(10px, -40px);
+    pointer-events: none;
+}
+
+@keyframes scorebump{
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+    }
+
+
+ @keyframes appears {
+     from {
+         transform: translateY(20px);
+
+     }
+     to {
+        transform: translateY(-90px);
+
+     }
+ }   
+
+
+ @keyframes clowndown {
+    from {
+        transform: translateY(-100px);
+
+    }
+    to {
+       transform: translateY(60px);
+
+    }
+}   
